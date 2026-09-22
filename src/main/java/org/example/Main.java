@@ -2,11 +2,13 @@ package org.example;
 
 public class Main {
     static void main() {
-        ProdutoEletronico eletronico= new ProdutoEletronico("Tv", 2.500,"Eletro",5);
+        Produto p1 = new ProdutoEletronico("TV", 2000.0, "Eletronicos", 12);
+        Produto p2 = new ProdutoAlimenticio("Arroz", 8.0, "Alimentos", "31/12/2026");
 
-        System.out.println(eletronico);
-        ProdutoAlimenticio alimento=new ProdutoAlimenticio("12/09/2037", "Farinha",3.0,"Grãos");
-
-        System.out.println(alimento);
+        System.out.println(p1 instanceof Produto);           // true
+        System.out.println(p1 instanceof ProdutoEletronico); // true
+        System.out.println(p1 instanceof ProdutoAlimenticio);// false
+        System.out.println(p2 instanceof Produto);           // true
+        System.out.println(p1 instanceof Object);            // true
     }
 }
